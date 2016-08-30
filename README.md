@@ -3,7 +3,7 @@
 ### Install
 * download or clone this repo
 * download or clone [Kirby CMS](https://getkirby.com/)
-* move Kirby CMS contents into /app folder (except /assets)
+* move 'kirby' into root, rename it 'site'
 
 ### Run
 - `npm install` — installs dependencies
