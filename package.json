@@ -15,11 +15,15 @@
     "gulp-if": "^2.0.1",
     "gulp-include": "^2.3.1",
     "gulp-plumber": "^1.1.0",
+    "gulp-prompt": "^0.2.0",
     "gulp-rename": "^1.2.2",
+    "gulp-rsync": "0.0.6",
     "gulp-sass": "^2.3.2",
     "gulp-shell": "^0.5.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "minimist": "^1.2.0",
     "require-dir": "^0.3.0"
   },
   "scripts": {

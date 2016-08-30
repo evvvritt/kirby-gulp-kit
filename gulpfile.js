@@ -20,14 +20,14 @@ var tasks = requireDir('gulp-tasks');
 
 // Source paths
 var js = {
-      src: ['app/assets/js/src/*.coffee', 'app/assets/js/src/*.js'],
-      dest: 'app/assets/js',
-      watch: ['app/assets/js/src/**/*.coffee','app/assets/js/src/**/*.js']
+      src: ['src/js/*.coffee', 'src/js/*.js'],
+      dest: 'site/assets/js',
+      watch: ['src/js/**/*.coffee','src/js/**/*.js']
     },
     css = {
-        src: 'app/assets/css/src/*.scss',
-        dest: 'app/assets/css',
-        watch: 'app/assets/css/src/**/*.scss'
+        src: 'src/css/src/*.scss',
+        dest: 'site/assets/css',
+        watch: 'src/css/**/*.scss'
     };
 
 // Compile and minify Sass 
@@ -58,7 +58,7 @@ gulp.task('scripts', function () {
 
 // php server
 gulp.task('php', function() {
-    php.server({ base: 'app', port: 8010, keepalive: true});
+    php.server({ base: 'site', port: 8010, keepalive: true});
 });
 
 // Watch: js complete ?
@@ -78,9 +78,9 @@ gulp.task('w', ['php','styles', 'scripts'], function() {
 
   gulp.watch([
     //'app/*.html',
-    'app/site/**/*.php',
-    'app/assets/images/**/*',
-    'app/assets/fonts/**/*',
+    'kirby/site/**/*.php',
+    'src/images/**/*',
+    'src/fonts/**/*',
   ]).on('change', reload);
 
   gulp.watch(css.watch, ['styles']);
