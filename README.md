@@ -1,9 +1,9 @@
 # kirby-gulp-kit
 
 ### Install
-* download or clone this repo
-* download or clone [Kirby CMS](https://getkirby.com/)
-* move 'kirby' into root, rename it 'site'
+1. download or clone this repo
+2. download or clone [Kirby CMS](https://getkirby.com/)
+3. **move** entire Kirby CMS site folder into root, rename it 'site'
 
 ### Run
 - `npm install` — installs dependencies
