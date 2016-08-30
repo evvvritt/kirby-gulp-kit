@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+bower_components
+gulp-tasks/content.js
+
+# kirby
+app/*
+!app/assets

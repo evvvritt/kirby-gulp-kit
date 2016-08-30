@@ -1,0 +1,30 @@
+{
+  "name": "kirby-gulp-kit",
+  "version": "1.0.0",
+  "description": "Kirby CMS + Gulp (SASS, CoffeeScript, BrowserSync) Starter Kit",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.14.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-bump": "^2.4.0",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-coffee": "^2.3.2",
+    "gulp-connect-php": "0.0.8",
+    "gulp-if": "^2.0.1",
+    "gulp-include": "^2.3.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-shell": "^0.5.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "require-dir": "^0.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "everettwilliams.info",
+  "license": "ISC"
+}
