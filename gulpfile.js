@@ -15,8 +15,8 @@ var php = require('gulp-connect-php');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
-var requireDir = require('require-dir');
-var tasks = requireDir('gulp-tasks');
+//var requireDir = require('require-dir');
+//var tasks = requireDir('gulp-tasks');
 
 // Source paths
 var js = {
@@ -25,7 +25,7 @@ var js = {
       watch: ['src/js/**/*.coffee','src/js/**/*.js']
     },
     css = {
-        src: 'src/css/src/*.scss',
+        src: 'src/css/*.scss',
         dest: 'site/assets/css',
         watch: 'src/css/**/*.scss'
     };
@@ -85,8 +85,6 @@ gulp.task('w', ['php','styles', 'scripts'], function() {
 
   gulp.watch(css.watch, ['styles']);
   gulp.watch(js.watch, ['js-watch']);
-  //gulp.watch('app/fonts/**/*', ['fonts']);
-  //gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
 
 // Version 'Bump'
