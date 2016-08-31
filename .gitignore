@@ -4,4 +4,5 @@ bower_components
 gulp-tasks/content.js
 
 # kirby
+dist
 site

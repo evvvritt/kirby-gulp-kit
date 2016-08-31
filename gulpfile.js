@@ -21,12 +21,12 @@ var reload = browserSync.reload;
 // Source paths
 var js = {
       src: ['src/js/*.coffee', 'src/js/*.js'],
-      dest: 'site/assets/js',
+      dest: 'dist/assets/js',
       watch: ['src/js/**/*.coffee','src/js/**/*.js']
     },
     css = {
         src: 'src/css/*.scss',
-        dest: 'site/assets/css',
+        dest: 'dist/assets/css',
         watch: 'src/css/**/*.scss'
     };
 
@@ -77,8 +77,7 @@ gulp.task('w', ['php','styles', 'scripts'], function() {
   });
 
   gulp.watch([
-    //'app/*.html',
-    'kirby/site/**/*.php',
+    'dist/site/**/*.php',
     'src/images/**/*',
     'src/fonts/**/*',
   ]).on('change', reload);
