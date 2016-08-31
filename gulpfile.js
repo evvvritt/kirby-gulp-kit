@@ -58,7 +58,7 @@ gulp.task('scripts', function () {
 
 // php server
 gulp.task('php', function() {
-    php.server({ base: 'site', port: 8010, keepalive: true});
+    php.server({ base: 'dist', port: 8010, keepalive: true});
 });
 
 // Watch: js complete ?
