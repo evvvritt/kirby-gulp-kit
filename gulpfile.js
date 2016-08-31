@@ -37,11 +37,13 @@ gulp.task('styles', function () {
     .pipe(sass())
     .pipe(autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
     .pipe(gulp.dest(css.dest))
+    .pipe(browserSync.stream())
+    // min
     .pipe(rename({ suffix: '.min' }))
     .pipe(cleancss())
     .pipe(gulp.dest(css.dest))
     .pipe(browserSync.stream()) //.pipe(reload({stream: true}));
-}); 
+});
 
 // Scripts
 gulp.task('scripts', function () {
