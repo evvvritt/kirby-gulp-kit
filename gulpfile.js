@@ -49,7 +49,12 @@ gulp.task('styles', function () {
 gulp.task('scripts', function () {
   gulp.src(js.src)
     .pipe(plumber())
-    .pipe(include())
+    .pipe(include({
+      includePaths: [
+        __dirname + '/bower_components',
+        __dirname + '/src/js'
+      ]
+    }))
     .pipe(gulpif("*.coffee", coffee()))
     .pipe(gulp.dest(js.dest))
     .pipe(uglify())
