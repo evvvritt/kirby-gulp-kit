@@ -37,12 +37,11 @@ gulp.task('styles', function () {
     .pipe(sass())
     .pipe(autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
     .pipe(gulp.dest(css.dest))
-    .pipe(browserSync.stream())
+    .pipe(reload({stream: true})) //.pipe(browserSync.stream())
     // min
     .pipe(rename({ suffix: '.min' }))
     .pipe(cleancss())
-    .pipe(gulp.dest(css.dest))
-    .pipe(browserSync.stream()) //.pipe(reload({stream: true}));
+    .pipe(gulp.dest(css.dest))    
 });
 
 // Scripts
@@ -85,8 +84,8 @@ gulp.task('w', ['php','styles', 'scripts'], function() {
 
   gulp.watch([
     'dist/site/**/*.php',
-    'src/images/**/*',
-    'src/fonts/**/*',
+    //'src/images/**/*',
+    //'src/fonts/**/*',
   ]).on('change', reload);
 
   gulp.watch(css.watch, ['styles']);
@@ -95,7 +94,7 @@ gulp.task('w', ['php','styles', 'scripts'], function() {
 
 // Version 'Bump'
 gulp.task('bump', function(){
-  gulp.src('./*.json')
+  gulp.src('./package.json')
   .pipe(bump({type:'minor'}))
   .pipe(gulp.dest('./'));
 });
